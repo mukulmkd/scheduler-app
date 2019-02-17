@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { ICalendarState } from './model';
-export default class CalendarCells extends React.Component<ICalendarState> {
+import { ICalendar } from './model';
+export default class CalendarCells extends React.Component<ICalendar> {
     render(): JSX.Element;
 }

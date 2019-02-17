@@ -1,6 +1,6 @@
 import * as React from 'react';
-import { ICalendarState } from './model';
-export default class Calendar extends React.Component<{}, ICalendarState> {
+import { ICalendar } from './model';
+export default class Calendar extends React.Component<{}, ICalendar> {
     constructor(props: {});
     renderHeader(): JSX.Element;
     nextMonth: () => void;

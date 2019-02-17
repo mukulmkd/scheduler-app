@@ -1,4 +1,4 @@
-export interface ICalendarState {
+export interface ICalendar {
     currentMonth: Date;
     selectedDate: Date;
 }
