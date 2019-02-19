@@ -38,7 +38,6 @@ export default class CalendarCell extends React.Component<ICell, ICellState> {
                     <Appointments
                         day={dateFns.parse(this.props.cloneDay)}
                     />
-                    {/* <button className="btn-close" onClick={this.toggleModal}>Close</button> */}
                     <div style={{ marginTop: '1em' }}>
                         <Button buttonType={ButtonType.primary} onClick={this.toggleModal}>Close</Button>
                     </div>

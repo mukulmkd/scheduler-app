@@ -1,26 +1,30 @@
 import * as React from 'react';
-import { IAppointment } from './model';
-import { Label } from 'office-ui-fabric-react/lib/Label';
+import { IAppointment, IAppointments } from './model';
 import { Button, ButtonType } from 'office-ui-fabric-react/lib/Button';
+import AppointmentTable from './AppointmentTable';
 import dateFns from 'date-fns';
 import './style.css';
+import data from './data';
 
-export default class Appointments extends React.Component<IAppointment, IAppointment> {
+export default class Appointments extends React.Component<IAppointment, IAppointments> {
     constructor(props: IAppointment) {
         super(props);
         this.state = {
-            day: this.props.day
+            day: this.props.day,
+            todayData: data
         };
     }
     nextDate = () => {
         this.setState({
-            day: dateFns.addDays(this.state.day, 1)
+            day: dateFns.addDays(this.state.day, 1),
+            todayData: data
         });
     };
 
     prevDate = () => {
         this.setState({
-            day: dateFns.subDays(this.state.day, 1)
+            day: dateFns.subDays(this.state.day, 1),
+            todayData: data
         });
     };
     render() {
@@ -29,42 +33,11 @@ export default class Appointments extends React.Component<IAppointment, IAppoint
         return (
             <div>
                 <div>
-                    <Button buttonType={ButtonType.primary} onClick={this.prevDate}>{'<<'}</Button>
-                    <Label><b>{currDate}</b></Label>
+                    <Button buttonType={ButtonType.primary} onClick={this.prevDate} style={{ marginRight: "1em" }}>{'<<'}</Button>
+                    <div style={{ width: "10em", textAlign: "center", float: "left" }}><b>{currDate}</b></div>
                     <Button buttonType={ButtonType.primary} onClick={this.nextDate}>{'>>'}</Button>
                 </div>
-                <div className="divTable">
-                    <div className="divTableBody">
-                        <div className="divTableHeading">
-                            <div className="divTableHeaderCell">Meeting Set By</div>
-                            <div className="divTableHeaderCell">Attendee</div>
-                            <div className="divTableHeaderCell">Agenda</div>
-                            <div className="divTableHeaderCell">Start Time</div>
-                            <div className="divTableHeaderCell">End Time</div>
-                        </div>
-                        <div className="divTableRow">
-                            <div className="divTableCell">&nbsp;</div>
-                            <div className="divTableCell">&nbsp;</div>
-                            <div className="divTableCell">&nbsp;</div>
-                            <div className="divTableCell">&nbsp;</div>
-                            <div className="divTableCell">&nbsp;</div>
-                        </div>
-                        <div className="divTableRow">
-                            <div className="divTableCell">&nbsp;</div>
-                            <div className="divTableCell">&nbsp;</div>
-                            <div className="divTableCell">&nbsp;</div>
-                            <div className="divTableCell">&nbsp;</div>
-                            <div className="divTableCell">&nbsp;</div>
-                        </div>
-                        <div className="divTableRow">
-                            <div className="divTableCell">&nbsp;</div>
-                            <div className="divTableCell">&nbsp;</div>
-                            <div className="divTableCell">&nbsp;</div>
-                            <div className="divTableCell">&nbsp;</div>
-                            <div className="divTableCell">&nbsp;</div>
-                        </div>
-                    </div>
-                </div>
+                <AppointmentTable todayData={this.state.todayData} day={this.state.day} />
             </div>
         );
     }
