@@ -3,6 +3,7 @@ import dateFns from 'date-fns';
 import { ICell, ICellState } from './model';
 import Appointments from '../appointments/Appointments';
 import ReactModal from 'react-modal';
+import { Button, ButtonType } from 'office-ui-fabric-react/lib/Button';
 ReactModal.setAppElement('#app');
 
 export default class CalendarCell extends React.Component<ICell, ICellState> {
@@ -37,7 +38,10 @@ export default class CalendarCell extends React.Component<ICell, ICellState> {
                     <Appointments
                         day={dateFns.parse(this.props.cloneDay)}
                     />
-                    <button onClick={this.toggleModal}>Close</button>
+                    {/* <button className="btn-close" onClick={this.toggleModal}>Close</button> */}
+                    <div style={{ marginTop: '1em' }}>
+                        <Button buttonType={ButtonType.primary} onClick={this.toggleModal}>Close</Button>
+                    </div>
                 </ReactModal>
             </div>
         );

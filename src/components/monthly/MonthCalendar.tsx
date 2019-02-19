@@ -3,6 +3,7 @@ import dateFns from 'date-fns';
 import { ICalendar } from './model';
 import CalendarCells from './CalendarCells';
 import CalendarDays from './CalendarDays';
+import './calendar.css';
 
 export default class Calendar extends React.Component<{}, ICalendar> {
     constructor(props: {}) {

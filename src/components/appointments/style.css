@@ -1,20 +1,38 @@
-.backdrop {
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background-color: rgba(0, 0, 0, 0.3);
-    padding: 50;
-    z-index: 2;
+.divTable {
+    display: table;
+    width: 100%;
+    margin-top: 2%;
 }
 
-.modal {
-    background-color: #fff;
-    border-radius: 15px;
-    max-width: 500;
-    min-height: 300;
-    margin: 0 auto;
-    padding: 30;
-    z-index: 3;
+.divTableRow {
+    display: table-row;
+}
+
+.divTableCell, .divTableHead {
+    border: 1px solid #999999;
+    display: table-cell;
+    padding: 3px 10px;
+}
+
+.divTableHeaderCell {
+    border: 1px solid #999999;
+    display: table-cell;
+    padding: 3px 10px;
+    text-align: center;
+}
+
+.divTableHeading {
+    background-color: #EEE;
+    display: table-row;
+    font-weight: bold;
+}
+
+.divTableFoot {
+    background-color: #EEE;
+    display: table-footer-group;
+    font-weight: bold;
+}
+
+.divTableBody {
+    display: table-row-group;
 }
