@@ -11,5 +11,12 @@
     "nodejs"
   ],
   "author": "Mukul Kishore",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "concurrently": "^4.1.0",
+    "mongoose": "^5.5.15"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.1"
+  }
 }
