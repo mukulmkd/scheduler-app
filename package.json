@@ -1,0 +1,23 @@
+{
+  "name": "scheduler-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "concurrently \"cd server && node server.js\" \"cd client && npm start\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mukulmkd/scheduler-app.git"
+  },
+  "keywords": [],
+  "author": "Mukul Kishore",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mukulmkd/scheduler-app/issues"
+  },
+  "homepage": "https://github.com/mukulmkd/scheduler-app#readme",
+  "dependencies": {
+    "concurrently": "^4.1.0"
+  }
+}

@@ -1,17 +1,17 @@
 export interface ICalendar {
-    currentMonth: Date;
-    selectedDate: Date;
+  currentMonth: Date;
+  selectedDate: Date;
 }
 export interface ICalendarHeader {
-    month: Date;
+  month: Date;
 }
 export interface ICell {
-    day: Date;
-    monthStart: Date;
-    selectedDate: Date;
-    cloneDay: Date;
-    formattedDate: string;
+  day: Date;
+  monthStart: Date;
+  selectedDate: Date;
+  cloneDay: Date;
+  formattedDate: string;
 }
 export interface ICellState {
-    showModal: boolean;
+  showModal: boolean;
 }

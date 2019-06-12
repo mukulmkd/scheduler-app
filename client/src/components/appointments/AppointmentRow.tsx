@@ -1,19 +1,19 @@
-import * as React from 'react';
-import { ITableData } from './model';
+import * as React from "react";
+import { ITableData } from "./model";
 
 export default class AppointmentRow extends React.Component<ITableData> {
-    constructor(props:ITableData) {
-        super(props);        
-    }
-    render() {
-        return (
-            <div className="divTableRow">
-                <div className="divTableCell">{this.props.organiser}</div>
-                <div className="divTableCell">{this.props.attendee}</div>
-                <div className="divTableCell">{this.props.agenda}</div>
-                <div className="divTableCell">{this.props.start_time}</div>
-                <div className="divTableCell">{this.props.end_time}</div>
-            </div>
-        );
-    }
+  constructor(props: ITableData) {
+    super(props);
+  }
+  render(): JSX.Element {
+    return (
+      <div className="divTableRow">
+        <div className="divTableCell">{this.props.organiser}</div>
+        <div className="divTableCell">{this.props.attendee}</div>
+        <div className="divTableCell">{this.props.agenda_title}</div>
+        <div className="divTableCell">{this.props.start_time}</div>
+        <div className="divTableCell">{this.props.end_time}</div>
+      </div>
+    );
+  }
 }

@@ -1,16 +1,18 @@
 export interface IAppointment {
-    day: Date;
+  day: Date;
 }
 
 export interface ITableData {
-    id: number;
-    organiser: string;
-    attendee: string;
-    agenda: string;
-    start_time: string;
-    end_time: string;
+  id: number;
+  organiser: string;
+  attendee: string;
+  agenda_title: string;
+  agenda_description: string;
+  appointment_date: string;
+  start_time: string;
+  end_time: string;
 }
 export interface IAppointments {
-    day: Date;
-    todayData: ITableData[];
+  day: Date;
+  todayData: ITableData[];
 }
